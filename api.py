@@ -46,4 +46,4 @@ def logged_in(username:str, password_length:int):
     return f"<h2>Login success for user '{username}' with password of length: {password_length}</h2>"
 
 if __name__ == "__main__":
-   app.run(debug=True)
+   app.run(host="0.0.0.0")
