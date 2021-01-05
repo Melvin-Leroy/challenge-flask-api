@@ -14,4 +14,4 @@ COPY procfile procfile
 COPY heroku.yml heroku.yml
 
 CMD start_app_command -p $PORT
-CMD ["python", "api.py"]
+ENTRYPOINT [ "python", 'api.py' ]
