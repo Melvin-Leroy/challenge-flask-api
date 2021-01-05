@@ -10,5 +10,7 @@ RUN mkdir templates
 COPY api.py api.py
 COPY templates/base.html templates/base.html
 COPY templates/login.html templates/login.html
+COPY procfile procfile
+COPY heroku.yml heroku.yml
 
 CMD ["python", "api.py"]
