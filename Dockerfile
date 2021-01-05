@@ -13,5 +13,4 @@ COPY templates/login.html templates/login.html
 COPY procfile procfile
 COPY heroku.yml heroku.yml
 
-CMD start_app_command -p $PORT
-ENTRYPOINT [ "python", 'api.py' ]
+CMD [ "python", 'api.py' ]
