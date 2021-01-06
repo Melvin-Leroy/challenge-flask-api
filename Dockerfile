@@ -2,6 +2,7 @@ FROM python:3.9.1
 
 # Install Flask.
 RUN pip install Flask
+RUN pip install gunicorn
 
 # Create the directories.
 RUN mkdir templates

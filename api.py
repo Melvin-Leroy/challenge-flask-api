@@ -1,5 +1,6 @@
 from flask import Flask, redirect, render_template, request, url_for
 from random import randint
+import os
 
 
 app = Flask(__name__)
@@ -46,4 +47,5 @@ def logged_in(username:str, password_length:int):
     return f"<h2>Login success for user '{username}' with password of length: {password_length}</h2>"
 
 if __name__ == "__main__":
-   app.run(host="0.0.0.0")
+   port = int(os.environ.get("PORT", 4000))
+   app.run(host='0.0.0.0', port=port)
